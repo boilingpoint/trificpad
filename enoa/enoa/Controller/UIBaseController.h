@@ -14,6 +14,7 @@
 @interface UIBaseController : UIViewController
 - (IBAction)goto:(id)sender;
 
+-(id)GetObjectByKey:(NSString *)key;
 -(void)SetObject:(id)object ByKey:(NSString *)key;
 -(id)GetObjectByKey:(NSString *)key;
 -(void)gotoView:(UIViewController *)viewController;
@@ -29,4 +30,5 @@
 - (IBAction)dismissError:(NSString *)message;
 
 -(bool)isNetworkConnected;
+-(void)SetObject:(id)object ByKey:(NSString *)key;
 @end

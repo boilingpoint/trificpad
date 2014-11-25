@@ -10,7 +10,8 @@
 #import "UITransportationDetailController.h"
 #import "ETColor.h"
 #import "UINotificationController.h"
-
+#import "ETRPLine.h"
+#import "ETTransLocation.h"
 
 
 #define HELVETICANEUE_FONT(s) [UIFont fontWithName:@"HelveticaNeue" size:s]
@@ -18,6 +19,9 @@
 #define HELVETICANEUEBOLD_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Medium" size:s]
 
 @interface UITransportationDetailController ()
+
+@property ETRPLine *rpline;
+@property NSMutableArray *locations;
 
 @end
 
@@ -31,6 +35,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.rpline = [ETRPLine alloc];
+    [self.rpline init];
+    NSData *encodeObject = [self GetObjectByKey:@"DetailLine"];
+    self.line = [NSKeyedUnarchiver unarchiveObjectWithData:encodeObject];
+    ETTransLocation *location = [ETTransLocation alloc];
+    [location init];
+    self.locations = [location getTransLocationArrayByLine:self.line.OptionCode AndDate:self.line.Date];
+    
+    [self initTableView];
+    
+    //self.rpline = [self.rpline getRPLineByCode:self.lineCode];
 }
 
 
@@ -73,7 +88,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MM/dd/yyyy"];
     NSString *currentDate = [formatter stringFromDate:[NSDate date]];
-    [self.lblInfo setText:[NSString stringWithFormat:@"Date: %@   Line: %@   VH: %@   PAX: %@", currentDate, @"1C", @"T164", @"25"]];
+    [self.lblInfo setText:[NSString stringWithFormat:@"Date: %@   Line: %@   VH: %@   PAX: %@", self.line.Date, self.line.OptionName, self.line.Vh, self.line.Pax]];
     [self.lblInfo setFrame:CGRectMake(leftMargin, 12, 602, 74)];
     self.lblInfo.lineBreakMode = UILineBreakModeWordWrap;
     self.lblInfo.numberOfLines = 3;
@@ -149,21 +164,24 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 4;
+    return self.locations.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 3;
+    ETTransLocation *location = self.locations[section];
+    return location.OrderArray.count;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    ETTransLocation *location = self.locations[section];
     UIView *myView = [[UIView alloc] init];
     //myView.backgroundColor = [ETColor colorWithHexString:@"#e1e1e1"];
     UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, self.tableView.frame.size.width, 72)];
+    lbl.text = [NSString stringWithFormat:@"%@, %@, Location Total:%d",location.Time, location.Location, location.Pax];
     [myView addSubview:lbl];
     [myView setBackgroundColor:[ETColor colorWithHexString:@"#f6f6f6"]];
     return myView;
@@ -176,13 +194,9 @@
     {
         return 42;
     }
-    else if(indexPath.row == 1)
+    else// if(indexPath.row == 1)
     {
         return 90;
-    }
-    else
-    {
-        return 58;
     }
 }
 
@@ -202,6 +216,11 @@
             [(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];
         }
     }
+    ETTransLocation *location = self.locations[indexPath.section];
+    ETOrderInfo *order = location.OrderArray[indexPath.row];
+    UIView *view = [[UIView alloc] init];
+    UILabel *lblContactor = [[UILabel alloc] init];
+    lblContactor.text = [NSString stringWithFormat:@"%@ %@",order.Contactor.FirstName, order.Contactor.LastName];
     [cell setBackgroundColor:[ETColor colorWithHexString:@"#f6f6f6"]];
     
     return cell;

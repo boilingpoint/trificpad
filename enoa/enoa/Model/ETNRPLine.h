@@ -6,18 +6,26 @@
 //  Copyright (c) 2014年 etourer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "ETBase.h"
+#import "ETPriceType.h"
+#import "ETLine.h"
+#import <Foundation/Foundation.h>
 
-@interface ETNRPLine : ETBase
+@interface ETNRPLine : ETLine
 {
-    NSString *OptionCode;
-    NSString *OptionName;
-    NSString *Driver;
-    NSString *Vh;
-    NSString *StartTime;
-    NSString *EndTime;
+    //NSString *OptionCode;
+    //NSString *OptionName;
+    //NSString *Driver;
+    //NSString *Vh;
+    NSString *startTime;
+    NSString *endTime;
+    
 }
+
+@property NSString *StartTime;
+@property NSString *EndTime;
+
+
 -(void)init;
 -(NSArray *)getNRPLinesByDate:(NSString *)date ByOwner:(NSInteger) owner;
 

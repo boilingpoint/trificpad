@@ -17,7 +17,7 @@
 //@property (strong, nonatomic) IBOutlet UIToolbar *tabNav;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) IBOutlet UIView *toolbarView;
+@property (strong, nonatomic) IBOutlet UIToolbar *tabNav;
 
 - (IBAction)toolBarItemTap:(id)sender;
 

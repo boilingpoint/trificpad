@@ -122,6 +122,17 @@ static float progress = 0.0f;
         [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.4f];
 }
 
+-(id)GetObjectByKey:(NSString *)key
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults objectForKey:key];
+}
+
+-(void)SetObject:(id)object ByKey:(NSString *)key
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:object forKey:key];
+}
 
 #pragma mark -
 #pragma mark Dismiss Methods Sample

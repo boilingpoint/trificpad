@@ -25,4 +25,60 @@
     NSString *result = [mStr copy];
     return result;
 }
+
++(NSString *)getStringFromDic:(NSDictionary *)dic  Key:(NSString *)key
+{
+    if(nil == dic)
+    {
+        return nil;
+    }
+    if([dic valueForKey:key] != nil &&
+    (NSNull *)[dic valueForKey:key] != [NSNull null])
+    {
+        return [dic valueForKey:key];
+    }
+    return nil;
+}
+
++(NSInteger)getIntegerFromDic:(NSDictionary *)dic  Key:(NSString *)key
+{
+    if(nil == dic)
+    {
+        return -1;
+    }
+    if([dic valueForKey:key] != nil &&
+       (NSNull *)[dic valueForKey:key] != [NSNull null])
+    {
+        return [(NSNumber *)[dic valueForKey:key] intValue];
+    }
+    return -1;
+}
+
++(double)getDoubleFromDic:(NSDictionary *)dic  Key:(NSString *)key
+{
+    if(nil == dic)
+    {
+        return -1;
+    }
+    if([dic valueForKey:key] != nil &&
+       (NSNull *)[dic valueForKey:key] != [NSNull null])
+    {
+        return [(NSNumber *)[dic valueForKey:key] doubleValue];
+    }
+    return -1;
+}
+
++(NSDictionary *)getDicFromDic:(NSDictionary *)dic  Key:(NSString *)key
+{
+    if(nil == dic)
+    {
+        return nil;
+    }
+    if([dic valueForKey:key] != nil &&
+       (NSNull *)[dic valueForKey:key] != [NSNull null])
+    {
+        return [dic valueForKey:key];
+    }
+    return nil;
+}
 @end

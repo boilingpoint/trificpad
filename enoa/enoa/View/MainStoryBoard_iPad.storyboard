@@ -630,11 +630,48 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="K4J-XC-ROp">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem image="icon_home.png" width="50" id="jdd-7u-B0h">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="toolBarItemTap:" destination="F2S-yN-EJE" id="rHM-7v-ROv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="1" image="icon_transportation_gray.png" width="50" id="ytn-m6-Uh7">
+                                        <connections>
+                                            <action selector="toolBarItemTap:" destination="F2S-yN-EJE" id="1cv-GX-DAJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="2" image="icon_checkin_gray.png" width="50" id="rMJ-Qj-HZr">
+                                        <connections>
+                                            <action selector="toolBarItemTap:" destination="F2S-yN-EJE" id="iqY-jQ-WSa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iVO-Zm-ci9"/>
+                                    <barButtonItem tag="3" title="Hello" id="Hgp-EX-8gi"/>
+                                    <barButtonItem tag="4" image="icon_message.png" id="QLU-aS-sjg">
+                                        <connections>
+                                            <action selector="toolBarItemTap:" destination="F2S-yN-EJE" id="0U1-To-PcK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="5" image="icon_setup.png" id="kV1-M4-jYf">
+                                        <connections>
+                                            <action selector="toolBarItemTap:" destination="F2S-yN-EJE" id="pZK-MQ-T8T"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="toolbarView" destination="a4l-wX-t4t" id="1Ao-rd-iiU"/>
+                        <outlet property="tabNav" destination="K4J-XC-ROp" id="974-kx-JHL"/>
+                        <outlet property="tableView" destination="6Bq-hq-frc" id="cRx-lV-lJk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pih-au-0sy" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -81,6 +81,16 @@
 		84482EA819F7B32C00DD701B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84482EA719F7B32C00DD701B /* libxml2.dylib */; };
 		84751F5D1A18A3D50074D953 /* icon_expansion_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 84751F5C1A18A3D50074D953 /* icon_expansion_white.png */; };
 		84751F5F1A18A3E60074D953 /* nav_return.png in Resources */ = {isa = PBXBuildFile; fileRef = 84751F5E1A18A3E60074D953 /* nav_return.png */; };
+		8486F6531A23057B00C11A59 /* ETPriceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F6521A23057B00C11A59 /* ETPriceType.m */; };
+		8486F6561A23077300C11A59 /* ETContactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F6551A23077300C11A59 /* ETContactor.m */; };
+		8486F6591A23079A00C11A59 /* ETDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F6581A23079A00C11A59 /* ETDriver.m */; };
+		8486F65C1A230BFA00C11A59 /* ETLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F65B1A230BFA00C11A59 /* ETLine.m */; };
+		8486F65F1A23104400C11A59 /* ETNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F65E1A23104400C11A59 /* ETNotification.m */; };
+		8486F6621A2311C100C11A59 /* ETCheckinInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F6611A2311C100C11A59 /* ETCheckinInfo.m */; };
+		8486F6651A23132400C11A59 /* ETOrderInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F6641A23132400C11A59 /* ETOrderInfo.m */; };
+		8486F66A1A23502100C11A59 /* ETTransLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F6691A23502100C11A59 /* ETTransLocation.m */; };
+		8486F66C1A2429AC00C11A59 /* ETAddon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F66B1A2429AC00C11A59 /* ETAddon.m */; };
+		8486F66E1A2429BE00C11A59 /* ETAdditionalQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F66D1A2429BE00C11A59 /* ETAdditionalQuestion.m */; };
 		848BE0A41A198CD90076D51A /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE0A21A198CD90076D51A /* Icon-60@2x.png */; };
 		848BE0A51A198CD90076D51A /* trip_report_but@18.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE0A31A198CD90076D51A /* trip_report_but@18.png */; };
 		848BE0B01A198E0E0076D51A /* icon_16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE0A61A198E0E0076D51A /* icon_16x16.png */; };
@@ -292,6 +302,25 @@
 		84482EA719F7B32C00DD701B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		84751F5C1A18A3D50074D953 /* icon_expansion_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_expansion_white.png; path = Images/icon_expansion_white.png; sourceTree = "<group>"; };
 		84751F5E1A18A3E60074D953 /* nav_return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav_return.png; path = Images/nav_return.png; sourceTree = "<group>"; };
+		8486F6521A23057B00C11A59 /* ETPriceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETPriceType.m; path = Model/ETPriceType.m; sourceTree = "<group>"; };
+		8486F6541A23059800C11A59 /* ETPriceType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ETPriceType.h; path = Model/ETPriceType.h; sourceTree = "<group>"; };
+		8486F6551A23077300C11A59 /* ETContactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETContactor.m; path = Model/ETContactor.m; sourceTree = "<group>"; };
+		8486F6571A23078600C11A59 /* ETContactor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ETContactor.h; path = Model/ETContactor.h; sourceTree = "<group>"; };
+		8486F6581A23079A00C11A59 /* ETDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETDriver.m; path = Model/ETDriver.m; sourceTree = "<group>"; };
+		8486F65A1A2307A800C11A59 /* ETDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ETDriver.h; path = Model/ETDriver.h; sourceTree = "<group>"; };
+		8486F65B1A230BFA00C11A59 /* ETLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETLine.m; path = Model/ETLine.m; sourceTree = "<group>"; };
+		8486F65D1A230C0600C11A59 /* ETLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ETLine.h; path = Model/ETLine.h; sourceTree = "<group>"; };
+		8486F65E1A23104400C11A59 /* ETNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETNotification.m; path = Model/ETNotification.m; sourceTree = "<group>"; };
+		8486F6601A23105700C11A59 /* ETNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ETNotification.h; path = Model/ETNotification.h; sourceTree = "<group>"; };
+		8486F6611A2311C100C11A59 /* ETCheckinInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETCheckinInfo.m; path = Model/ETCheckinInfo.m; sourceTree = "<group>"; };
+		8486F6631A2311D300C11A59 /* ETCheckinInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ETCheckinInfo.h; path = Model/ETCheckinInfo.h; sourceTree = "<group>"; };
+		8486F6641A23132400C11A59 /* ETOrderInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETOrderInfo.m; path = Model/ETOrderInfo.m; sourceTree = "<group>"; };
+		8486F6661A23133300C11A59 /* ETOrderInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ETOrderInfo.h; path = Model/ETOrderInfo.h; sourceTree = "<group>"; };
+		8486F6671A2315F600C11A59 /* ETAdditionalQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ETAdditionalQuestion.h; path = Model/ETAdditionalQuestion.h; sourceTree = "<group>"; };
+		8486F6681A23166F00C11A59 /* ETAddon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ETAddon.h; path = Model/ETAddon.h; sourceTree = "<group>"; };
+		8486F6691A23502100C11A59 /* ETTransLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETTransLocation.m; path = Model/ETTransLocation.m; sourceTree = "<group>"; };
+		8486F66B1A2429AC00C11A59 /* ETAddon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETAddon.m; path = Model/ETAddon.m; sourceTree = "<group>"; };
+		8486F66D1A2429BE00C11A59 /* ETAdditionalQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETAdditionalQuestion.m; path = Model/ETAdditionalQuestion.m; sourceTree = "<group>"; };
 		848BE0A11A18EE3D0076D51A /* MCSwipeTableViewCell-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MCSwipeTableViewCell-Prefix.pch"; path = "Library/MCSwipeTable/MCSwipeTableViewCell-Prefix.pch"; sourceTree = "<group>"; };
 		848BE0A21A198CD90076D51A /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Images/Icon-60@2x.png"; sourceTree = "<group>"; };
 		848BE0A31A198CD90076D51A /* trip_report_but@18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trip_report_but@18.png"; path = "Images/trip_report_but@18.png"; sourceTree = "<group>"; };
@@ -599,13 +628,32 @@
 				849A76461A0C6F3900D68F57 /* ETBase.h */,
 				849A76471A0C6F3900D68F57 /* ETBase.m */,
 				84482DDC19F79C9200DD701B /* ETUser.m */,
-				849A76491A0C719C00D68F57 /* ETRPLine.m */,
 				84482DDE19F79CAD00DD701B /* ETUser.h */,
+				849A76491A0C719C00D68F57 /* ETRPLine.m */,
 				849A764B1A0C71C200D68F57 /* ETRPLine.h */,
+				8496494A1A1F0F6C006893C2 /* ETNRPLine.m */,
 				849A764C1A0C740000D68F57 /* ETNRPLine.h */,
+				8486F6691A23502100C11A59 /* ETTransLocation.m */,
 				849A764D1A0C747100D68F57 /* ETTransLocation.h */,
 				849A764E1A0C74D800D68F57 /* ETGuest.h */,
-				8496494A1A1F0F6C006893C2 /* ETNRPLine.m */,
+				8486F6521A23057B00C11A59 /* ETPriceType.m */,
+				8486F6541A23059800C11A59 /* ETPriceType.h */,
+				8486F6551A23077300C11A59 /* ETContactor.m */,
+				8486F6571A23078600C11A59 /* ETContactor.h */,
+				8486F6581A23079A00C11A59 /* ETDriver.m */,
+				8486F65A1A2307A800C11A59 /* ETDriver.h */,
+				8486F65B1A230BFA00C11A59 /* ETLine.m */,
+				8486F65D1A230C0600C11A59 /* ETLine.h */,
+				8486F65E1A23104400C11A59 /* ETNotification.m */,
+				8486F6601A23105700C11A59 /* ETNotification.h */,
+				8486F6611A2311C100C11A59 /* ETCheckinInfo.m */,
+				8486F6631A2311D300C11A59 /* ETCheckinInfo.h */,
+				8486F6641A23132400C11A59 /* ETOrderInfo.m */,
+				8486F6661A23133300C11A59 /* ETOrderInfo.h */,
+				8486F66D1A2429BE00C11A59 /* ETAdditionalQuestion.m */,
+				8486F6671A2315F600C11A59 /* ETAdditionalQuestion.h */,
+				8486F6681A23166F00C11A59 /* ETAddon.h */,
+				8486F66B1A2429AC00C11A59 /* ETAddon.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1138,8 +1186,10 @@
 				84482DFA19F7A16B00DD701B /* ETLabelHelper.m in Sources */,
 				842683901A1DC6FE00D79F5C /* Model.m in Sources */,
 				84482DF919F7A16B00DD701B /* ETColor.m in Sources */,
+				8486F6591A23079A00C11A59 /* ETDriver.m in Sources */,
 				8496493A1A1EEFD2006893C2 /* ASICloudFilesCDNRequest.m in Sources */,
 				842294E619F8B44600EE3943 /* CallOutAnnotationView.m in Sources */,
+				8486F66E1A2429BE00C11A59 /* ETAdditionalQuestion.m in Sources */,
 				849A764A1A0C719C00D68F57 /* ETRPLine.m in Sources */,
 				8496495F1A1F424D006893C2 /* SwipeListTableView.m in Sources */,
 				84482DFB19F7A16B00DD701B /* ETNetworkHelper.m in Sources */,
@@ -1150,11 +1200,13 @@
 				849649641A21C7C0006893C2 /* SWTableViewCell.m in Sources */,
 				849649451A1EEFD2006893C2 /* ASIS3ObjectRequest.m in Sources */,
 				84482DFC19F7A16B00DD701B /* ETProgressHUD.m in Sources */,
+				8486F6621A2311C100C11A59 /* ETCheckinInfo.m in Sources */,
 				84482E0C19F7A46200DD701B /* AIMTableViewIndexBar.m in Sources */,
 				84482DE419F79FE400DD701B /* UIBaseController.m in Sources */,
 				848F86001A16F57C0094BD7D /* UITransportationController.m in Sources */,
 				849649401A1EEFD2006893C2 /* ASICloudFilesRequest.m in Sources */,
 				849A79841A161D9800D68F57 /* UILoginController.m in Sources */,
+				8486F6651A23132400C11A59 /* ETOrderInfo.m in Sources */,
 				844754321A177DD30005F2DA /* UINotificationController.m in Sources */,
 				84482DFE19F7A16B00DD701B /* ETRefreshTableHeaderView.m in Sources */,
 				8496463B1A1ED506006893C2 /* ASINetworkQueue.m in Sources */,
@@ -1166,6 +1218,7 @@
 				849649461A1EEFD2006893C2 /* ASIS3Request.m in Sources */,
 				84482E0119F7A16B00DD701B /* UITableView.m in Sources */,
 				842294E819F8B44600EE3943 /* JingDianMapCell.m in Sources */,
+				8486F65F1A23104400C11A59 /* ETNotification.m in Sources */,
 				8426839E1A1E1A2600D79F5C /* OrderDetailView.m in Sources */,
 				849646381A1ED506006893C2 /* ASIFormDataRequest.m in Sources */,
 				842683951A1DC78900D79F5C /* AdditionalInfoCell.m in Sources */,
@@ -1183,11 +1236,16 @@
 				842683861A1D9E9500D79F5C /* UICheckinDetailController.m in Sources */,
 				849646371A1ED506006893C2 /* ASIDownloadCache.m in Sources */,
 				84482DA919F793F800DD701B /* ViewController.m in Sources */,
+				8486F66C1A2429AC00C11A59 /* ETAddon.m in Sources */,
 				849A765B1A15FFA800D68F57 /* ETAuthorization.m in Sources */,
+				8486F6531A23057B00C11A59 /* ETPriceType.m in Sources */,
 				849A76481A0C6F3900D68F57 /* ETBase.m in Sources */,
 				8426839B1A1E166300D79F5C /* OrderInfoCell.m in Sources */,
 				8496463A1A1ED506006893C2 /* ASIInputStream.m in Sources */,
+				8486F6561A23077300C11A59 /* ETContactor.m in Sources */,
+				8486F66A1A23502100C11A59 /* ETTransLocation.m in Sources */,
 				84482E1019F7A50900DD701B /* ETFormatHelper.m in Sources */,
+				8486F65C1A230BFA00C11A59 /* ETLine.m in Sources */,
 				849646391A1ED506006893C2 /* ASIHTTPRequest.m in Sources */,
 				8496494B1A1F0F6C006893C2 /* ETNRPLine.m in Sources */,
 				84482E9C19F7A5DF00DD701B /* SVHTTPRequest.m in Sources */,

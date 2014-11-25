@@ -11,14 +11,20 @@
 #import "UITransportationController.h"
 #import "ETColor.h"
 #import "UINotificationController.h"
+#import "ETRPLine.h"
+#import "ETNRPLine.h"
 
 
 #define HELVETICANEUE_FONT(s) [UIFont fontWithName:@"HelveticaNeue" size:s]
 #define HELVETICANEUEMEDIUM_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Bold" size:s]
 #define HELVETICANEUEBOLD_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Medium" size:s]
 
+#define TommrowDate [[NSDate alloc] initWithTimeIntervalSinceNow:24 *60 *60];
+
 @interface UITransportationController ()
 
+@property NSArray *rplineArray;
+@property NSArray *nrplineArray;
 @end
 
 
@@ -32,6 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     cellCount = 20;
+    [self initData];
     [self initCollectionView];
 }
 
@@ -134,6 +141,10 @@
 - (IBAction)controlPressed:(id)sender {
     UISegmentedControl *control = (UISegmentedControl *)sender;
     
+    [self initData];
+    [self initCollectionView];
+    [self.collectionView reloadData];
+    /*
     if(control == self.daySegment)
     {
         [self initCollectionView];
@@ -149,6 +160,48 @@
         [self initCollectionView];
         [self.collectionView reloadData];
     }
+     */
+}
+
+-(void) initData
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSDate *date = nil;
+    if(self.daySegment.selectedSegmentIndex == 0)
+    {
+        date = [NSDate date];
+    }
+    else
+    {
+        date = TommrowDate;
+    }
+    NSString *strDate = [formatter stringFromDate:date];
+    
+    ETRPLine *rpline = [ETRPLine alloc];
+    [rpline init];
+    
+    ETNRPLine *nrpline = [ETNRPLine alloc];
+    [nrpline init];
+    
+    if(self.ownerSegment.selectedSegmentIndex == 0 && self.planSegment.selectedSegmentIndex == 0)
+    {
+        self.rplineArray = [rpline getRPLinesByDate:strDate ByOwner:0];
+        cellCount = self.rplineArray.count * 6;
+    } else if(self.ownerSegment.selectedSegmentIndex == 1 && self.planSegment.selectedSegmentIndex == 0)
+    {
+        self.rplineArray = [rpline getRPLinesByDate:strDate ByOwner:1];
+        cellCount = self.rplineArray.count * 6;
+    } else if(self.ownerSegment.selectedSegmentIndex == 0 && self.planSegment.selectedSegmentIndex == 1)
+    {
+        self.nrplineArray = [nrpline getNRPLinesByDate:strDate ByOwner:0];
+        cellCount = self.nrplineArray.count * 4;
+    } else if(self.ownerSegment.selectedSegmentIndex == 1 && self.planSegment.selectedSegmentIndex == 1)
+    {
+        self.nrplineArray = [nrpline getNRPLinesByDate:strDate ByOwner:1];
+        cellCount = self.nrplineArray.count * 5;
+    }
+    
 }
 
 
@@ -217,22 +270,23 @@
     if(self.ownerSegment.selectedSegmentIndex == 0 && self.planSegment.selectedSegmentIndex == 0)
     {
         row = indexPara / 6;
+        ETRPLine *line = (ETRPLine *)self.rplineArray[row];
         switch(indexPara % 6)
         {
             case 0:
-                result = row == 0 ? @"Line":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"Line": line.OptionName;
                 break;
             case 1:
-                result = row == 0 ? @"PAX":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"PAX":[NSString stringWithFormat:@"%d", line.Pax];
                 break;
             case 2:
-                result = row == 0 ? @"VH":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"VH":line.Vh;
                 break;
             case 3:
-                result = row == 0 ? @"1st PU Time":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"1st PU Time":line.FirstTime;
                 break;
             case 4:
-                result = row == 0 ? @"1st Pickup Location":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"1st Pickup Location":line.FirstLocation;
                 break;
             case 5:
                 result = row == 0 ? @"":@"View Detail";
@@ -241,22 +295,23 @@
     } else if(self.ownerSegment.selectedSegmentIndex == 1 && self.planSegment.selectedSegmentIndex == 0)
     {
         row = indexPara / 6;
+        ETRPLine *line = (ETRPLine *)self.rplineArray[row];
         switch(indexPara % 6)
         {
             case 0:
-                result = row == 0 ? @"Line":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"Line":line.OptionName;
                 break;
             case 1:
-                result = row == 0 ? @"PAX":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"PAX":[NSString stringWithFormat:@"%d", line.Pax];
                 break;
             case 2:
-                result = row == 0 ? @"Driver":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"Driver":line.Driver;
                 break;
             case 3:
-                result = row == 0 ? @"VH":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"VH":line.Vh;
                 break;
             case 4:
-                result = row == 0 ? @"1st PU Time":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"1st PU Time":line.FirstTime;
                 break;
             case 5:
                 result = row == 0 ? @"":@"View Detail";
@@ -265,40 +320,42 @@
     } else if(self.ownerSegment.selectedSegmentIndex == 0 && self.planSegment.selectedSegmentIndex == 1)
     {
         row = indexPara / 4;
+        ETNRPLine *line = (ETNRPLine *)self.nrplineArray[row];
         switch(indexPara % 4)
         {
             case 0:
-                result = row == 0 ? @"Line":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"Line":line.OptionName;
                 break;
             case 1:
-                result = row == 0 ? @"VH":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"VH":line.Vh;
                 break;
             case 2:
-                result = row == 0 ? @"Start Time":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"Start Time":line.StartTime;
                 break;
             case 3:
-                result = row == 0 ? @"End Time":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"End Time":line.EndTime;
                 break;
         }
     } else if(self.ownerSegment.selectedSegmentIndex == 1 && self.planSegment.selectedSegmentIndex == 1)
     {
         row = indexPara / 5;
+        ETNRPLine *line = (ETNRPLine *)self.nrplineArray[row];
         switch(indexPara % 5)
         {
             case 0:
-                result = row == 0 ? @"Line":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"Line":line.OptionName;
                 break;
             case 1:
-                result = row == 0 ? @"Driver":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"Driver":line.Driver;
                 break;
             case 2:
-                result = row == 0 ? @"VH":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"VH":line.Vh;
                 break;
             case 3:
-                result = row == 0 ? @"Start Time":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"Start Time":line.StartTime;
                 break;
             case 4:
-                result = row == 0 ? @"End Time":[NSString stringWithFormat:@"text %d", index];
+                result = row == 0 ? @"End Time":line.EndTime;
                 break;
         }
     }
@@ -405,6 +462,11 @@
 {
     if(indexPath.row % 6 == 5)
     {
+        ETRPLine *line = (ETRPLine *)self.rplineArray[indexPath.row / 6];
+        
+        NSData *archiveData = [NSKeyedArchiver archivedDataWithRootObject:line];
+        [self SetObject:archiveData ByKey:@"DetailLine"];
+        
         [self gotoView:[self.storyboard instantiateViewControllerWithIdentifier:@"UITransportationDetail"]];
     }
 }

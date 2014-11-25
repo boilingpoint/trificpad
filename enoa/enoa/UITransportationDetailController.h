@@ -13,9 +13,13 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "UIBaseController.h"
+#import "ETRPLine.h"
 
 @interface UITransportationDetailController : UIBaseController<UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate>{
 }
+
+@property(nonatomic, weak)ETRPLine *line;
+@property NSArray *transLocations;
 
 @property (strong, nonatomic) IBOutlet UIToolbar *tabNav;
 @property (weak, nonatomic) IBOutlet UIView *controlView;

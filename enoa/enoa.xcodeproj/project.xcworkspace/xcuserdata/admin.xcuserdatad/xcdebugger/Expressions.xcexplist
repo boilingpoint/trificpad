@@ -13,5 +13,19 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[ETRPLine getRPLinesByDate:ByOwner:]:ETRPLine.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UITransportationController viewDidLoad]:UITransportationController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UITransportationController collectionView:didSelectItemAtIndexPath:]:UITransportationController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "line.OptionCode">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

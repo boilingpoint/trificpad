@@ -405,6 +405,9 @@ static NSString * const kTableViewCellContentView = @"UITableViewCellContentView
     button.backgroundColor = color;
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.lineBreakMode = 1;
+    button.titleLabel.numberOfLines = 2;
+    
     [self addObject:button];
 }
 
