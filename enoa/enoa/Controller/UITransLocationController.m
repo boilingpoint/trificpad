@@ -1,13 +1,13 @@
 //
-//  TestController.m
+//  UITransLocationController.m
 //  enoa
 //
-//  Created by admin on 14-11-18.
+//  Created by admin on 14-11-27.
 //  Copyright (c) 2014年 etourer. All rights reserved.
 //
 
 
-#import "UITransportationDetailController.h"
+#import "UITransLocationController.h"
 #import "ETColor.h"
 #import "UINotificationController.h"
 #import "ETRPLine.h"
@@ -21,14 +21,11 @@
 #define HELVETICANEUEMEDIUM_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Bold" size:s]
 #define HELVETICANEUEBOLD_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Medium" size:s]
 
-@interface UITransportationDetailController ()<MapViewDelegate>
+@interface UITransLocationController ()
 
 @property ETRPLine *rpline;
 @property NSMutableArray *locations;
 
-
-@property (nonatomic,strong)MapView *mapView;
-@property (nonatomic,strong)NSArray *annotations;
 @end
 
 #define NAV_HEIGHT 60.0f
@@ -36,7 +33,7 @@
 #define NAV_Y 20
 #define NAV_BG @"#106bf8"
 
-@implementation UITransportationDetailController
+@implementation UITransLocationController
 
 
 - (void)viewDidLoad {
@@ -82,10 +79,6 @@
     self.lblInfo.lineBreakMode = UILineBreakModeWordWrap;
     self.lblInfo.numberOfLines = 3;
     [self.controlView setBackgroundColor:[ETColor colorWithHexString:@"#f6f6f6"]];
-    [self.typeSegment setFrame:CGRectMake(btnLeftMargin, 32, btnWidth * 2, btnHeight)];
-    [self.typeSegment setTitle:@"List" forSegmentAtIndex:0];
-    [self.typeSegment setTitle:@"Map" forSegmentAtIndex:1];
-    [self.typeSegment addTarget:self action:@selector(controlPressed:) forControlEvents:UIControlEventValueChanged];
     
     
     
@@ -93,80 +86,6 @@
                                         , self.view.frame.size.width - leftMargin * 2, listViewHeight)];
     [self.tableView setBackgroundColor:[ETColor colorWithHexString:@"#f6f6f6"]];
     
-    //[self.mapView setFrame:CGRectMake(0, self.tabNav.frame.origin.y +self.tabNav.frame.size.height + ctrlViewHeight, self.view.frame.size.width, self.view.frame.size.height - self.tabNav.frame.origin.y - self.tabNav.frame.size.height - ctrlViewHeight)];
-    //[self.mapView setHidden:YES];
-    
-    /*
-    self.annotations = @[@{@"latitude":@"30.281843",
-                           @"longitude":@"120.102193",
-                           @"title":@"test-title-1",
-                           @"subtitle":@"test-sub-title-11"},
-                         @{@"latitude":@"30.290144",
-                           @"longitude":@"120.146696‎",
-                           @"title":@"test-title-2",
-                           @"subtitle":@"test-sub-title-22"},
-                         @{@"latitude":@"30.248076",
-                           @"longitude":@"120.164162‎",
-                           @"title":@"test-title-3",
-                           @"subtitle":@"test-sub-title-33"},
-                         @{@"latitude":@"30.425622",
-                           @"longitude":@"120.299605",
-                           @"title":@"test-title-4",
-                           @"subtitle":@"test-sub-title-44"}
-                         ];
-    
-    self.annotations = [[NSMutableArray alloc] init];
-    for (int i=0;i<self.locations.count;i++)
-    {
-        self.annotations
-    }
-     */
-    
-    self.mapView = [[MapView alloc] initWithDelegate:self];
-    [self.view addSubview:_mapView];
-    [_mapView setFrame:CGRectMake(0, self.tabNav.frame.origin.y +self.tabNav.frame.size.height + ctrlViewHeight, self.view.frame.size.width, self.view.frame.size.height - self.tabNav.frame.origin.y - self.tabNav.frame.size.height - ctrlViewHeight)];
-    
-    [_mapView beginLoad];
-    self.mapView.hidden = YES;
-}
-
-
-#pragma mark -
-#pragma mark delegate
-
-- (NSInteger)numbersWithCalloutViewForMapView
-{
-    return self.locations.count;
-}
-
-- (CLLocationCoordinate2D)coordinateForMapViewWithIndex:(NSInteger)index
-{
-    //Item *item = [[Item alloc] initWithDictionary:[_annotations objectAtIndex:index]];
-    ETTransLocation *location = self.locations[index];
-    CLLocationCoordinate2D coordinate;
-    coordinate.latitude = [location.Latitude doubleValue];
-    coordinate.longitude = [location.Longitude doubleValue];
-    return coordinate;
-}
-
-- (UIImage *)baseMKAnnotationViewImageWithIndex:(NSInteger)index
-{
-    return [UIImage imageNamed:@"icon_pin.png"];
-}
-
-- (UIView *)mapViewCalloutContentViewWithIndex:(NSInteger)index
-{
-    //Item *item = [[Item alloc] initWithDictionary:[_annotations objectAtIndex:index]];
-    ETTransLocation *location = self.locations[index];
-    JingDianMapCell  *cell = [[JingDianMapCell alloc] initWithFrame:CGRectMake(0, 0, 243, 40)];
-    cell.lblPinTitle.text = location.Location;
-    cell.lblPinNum.text = [NSString stringWithFormat:@"%d", location.Pax];
-    return cell;
-}
-
-- (void)calloutViewDidSelectedWithIndex:(NSInteger)index
-{
-    [self gotoView:[self.storyboard instantiateViewControllerWithIdentifier:@"UILocation"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -193,54 +112,12 @@
     
 }
 
-- (IBAction)controlPressed:(id)sender {
-    UISegmentedControl *control = (UISegmentedControl *)sender;
-    
-    if(control.selectedSegmentIndex == 0)
-    {
-        [self.mapView setHidden:YES];
-        [self.tableView setHidden:NO];
-        [self.tableView reloadData];
-    } else
-    {
-        [self.mapView setHidden:NO];
-        [self.tableView setHidden:YES];
-    }
-}
 
 - (IBAction)toolBarItemTap:(id)sender {
     
     NSInteger tag = [sender tag];
-    //UINotificationController *notifiController = nil;
-    //notifiController = [[UINotificationController alloc] initWithStyle:UITableViewStylePlain];
     [super toolbarChange:tag BackTo:@"UITransportation"];
-    /*
-    NSInteger tag = [sender tag];
-    UINotificationController *notifiController = nil;
-    switch(tag)
-    {
-        case 1:
-            //[self gotoView:[self.storyboard instantiateViewControllerWithIdentifier:@"UITransportation"]];
-            break;
-        case 2:
-            [self gotoView:[self.storyboard instantiateViewControllerWithIdentifier:@"UICheckin"]];
-            break;
-        case 3:
-            break;
-        case 4:
-            notifiController = [[UINotificationController alloc] initWithStyle:UITableViewStylePlain];
-            [self gotoView: notifiController];
-            break;
-        case 5:
-            break;
-        case 6:
-            [self gotoView:[self.storyboard instantiateViewControllerWithIdentifier:@"UITransportation"]];
-            break;
-        default:
-            [self gotoView:[self.storyboard instantiateViewControllerWithIdentifier:@"UIHome"]];
-            break;
-    }
-     */
+  
 }
 
 

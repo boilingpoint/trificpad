@@ -87,6 +87,7 @@
                               initWithLatitude:annotation.latitude
                               andLongitude:annotation.longitude
                                   tag:annotation.tag];
+        
         [mapView addAnnotation:_calloutAnnotation];
         
         [mapView setCenterCoordinate:_calloutAnnotation.coordinate animated:YES];

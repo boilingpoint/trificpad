@@ -1,21 +1,20 @@
 //
-//  TestController.h
+//  UITransLocationController.h
 //  enoa
 //
-//  Created by admin on 14-11-18.
+//  Created by admin on 14-11-27.
 //  Copyright (c) 2014年 etourer. All rights reserved.
 //
 
-#ifndef enoa_UITransportationDetailController_h
-#define enoa_UITransportationDetailController_h
-
+#ifndef enoa_UITransLocationController_h
+#define enoa_UITransLocationController_h
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "UIBaseController.h"
 #import "ETRPLine.h"
 
-@interface UITransportationDetailController : UIBaseController<UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate>{
+@interface UITransLocationController : UIBaseController<UITableViewDelegate, UITableViewDataSource>{
 }
 
 @property(nonatomic, weak)ETRPLine *line;
@@ -24,7 +23,6 @@
 @property (strong, nonatomic) IBOutlet UIToolbar *tabNav;
 @property (weak, nonatomic) IBOutlet UIView *controlView;
 @property (weak, nonatomic) IBOutlet UILabel *lblInfo;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *typeSegment;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)toolBarItemTap:(id)sender;

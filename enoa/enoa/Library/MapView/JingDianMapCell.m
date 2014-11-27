@@ -28,7 +28,8 @@
     viewLeft.backgroundColor = [ETColor colorWithHexString:@"#007aff"];
     UIView *viewCenter = [[UIView alloc] initWithFrame:CGRectMake(40, self.frame.origin.y, 20, self.frame.size.height - 10)];
     viewCenter.backgroundColor = [UIColor whiteColor];
-    UIView *viewRight = [[UIView alloc] initWithFrame:CGRectMake(40, self.frame.origin.y, self.frame.size.width - 40, self.frame.size.height)];
+    UIView *viewRight = [[UIView alloc] initWithFrame:CGRectMake(40, self.frame.origin.y, self.frame.size.width - 40, self.frame.size.height - 10)];
+    viewRight.backgroundColor = [UIColor whiteColor];
     
     viewLeft.layer.cornerRadius = 7;
     

@@ -18,15 +18,33 @@
 -(NSArray *)getTransLocationArrayByLine:(NSString *)code AndDate:(NSString *)date
 {
     NSMutableArray *array = [[NSMutableArray alloc] init];
-    for(int i=0;i<10;i++)
+    
+    NSMutableArray *geo = @[@{@"latitude":@"30.281843",
+                              @"longitude":@"120.102193",
+                              @"title":@"test-title-1",
+                              @"subtitle":@"test-sub-title-11"},
+                            @{@"latitude":@"30.290144",
+                              @"longitude":@"120.146696‎",
+                              @"title":@"test-title-2",
+                              @"subtitle":@"test-sub-title-22"},
+                            @{@"latitude":@"30.248076",
+                              @"longitude":@"120.164162‎",
+                              @"title":@"test-title-3",
+                              @"subtitle":@"test-sub-title-33"},
+                            @{@"latitude":@"30.425622",
+                              @"longitude":@"120.299605",
+                              @"title":@"test-title-4",
+                              @"subtitle":@"test-sub-title-44"}];
+    for(int i=0;i<4;i++)
     {
-        
+          
         ETTransLocation *location = [ETTransLocation alloc];
         [location init];
         location.Time = [NSString stringWithFormat:@"3:%d", i];
         location.Location = [NSString stringWithFormat:@"location %d", i];
         location.Pax = i;
-        location.Geo = [NSString stringWithFormat:@"Geo %d", i];;
+        location.Latitude = [geo[i] objectForKey:@"latitude"];
+        location.Longitude = [geo[i] objectForKey:@"longitude"];
         
         location.OrderArray = [[NSMutableArray alloc] init];
         for(int j=0;j<3;j++)
@@ -95,7 +113,8 @@
     location.Time = [ETBase getStringFromDic:dic Key:@"Time"];
     location.Location = [ETBase  getStringFromDic:dic Key:@"Location"];
     location.Pax = [ETBase  getIntegerFromDic:dic Key:@"Pax"];
-    location.Geo = [ETBase  getStringFromDic:dic Key:@"Geo"];
+    location.Latitude = [ETBase  getStringFromDic:dic Key:@"Latitude"];
+    location.Longitude = [ETBase  getStringFromDic:dic Key:@"Longitude"];
     
     location.OrderArray = [ETOrderInfo transformToObjectArrayFromDictionary:[ETBase getDicFromDic:dic Key:@"Orders"]];
     

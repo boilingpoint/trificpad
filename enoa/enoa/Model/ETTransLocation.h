@@ -21,14 +21,16 @@
     NSString *time;
     NSString *location;
     NSInteger *pax;
-    NSString *geo;
+    NSString *latitude;
+    NSString *longitude;
     NSMutableArray *orderArray;
 }
 
 @property NSString *Time;
 @property NSString *Location;
 @property NSInteger *Pax;
-@property NSString *Geo;
+@property NSString *Latitude;
+@property NSString *Longitude;
 @property NSMutableArray *OrderArray;
 
 -(void)init;

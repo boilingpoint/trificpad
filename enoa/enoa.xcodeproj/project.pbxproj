@@ -173,6 +173,8 @@
 		84FD942F1A26BA74001EE96F /* CallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD94281A26BA74001EE96F /* CallOutAnnotationView.m */; };
 		84FD94301A26BA74001EE96F /* CalloutMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD942A1A26BA74001EE96F /* CalloutMapAnnotation.m */; };
 		84FD94311A26BA74001EE96F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD942C1A26BA74001EE96F /* MapView.m */; };
+		84FD94341A26BF6D001EE96F /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD94331A26BF6D001EE96F /* Item.m */; };
+		84FD94361A26CAE9001EE96F /* UITransLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD94351A26CAE9001EE96F /* UITransLocationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -452,6 +454,10 @@
 		84FD942A1A26BA74001EE96F /* CalloutMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutMapAnnotation.m; sourceTree = "<group>"; };
 		84FD942B1A26BA74001EE96F /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		84FD942C1A26BA74001EE96F /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		84FD94321A26BF6D001EE96F /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		84FD94331A26BF6D001EE96F /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		84FD94351A26CAE9001EE96F /* UITransLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITransLocationController.m; path = Controller/UITransLocationController.m; sourceTree = "<group>"; };
+		84FD94371A26CB05001EE96F /* UITransLocationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UITransLocationController.h; path = Controller/UITransLocationController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -594,6 +600,8 @@
 				84FD94201A26B97E001EE96F /* UITransportationDetailController.h */,
 				84FD941D1A26AE91001EE96F /* UICheckinDetailController.h */,
 				842683851A1D9E9500D79F5C /* UICheckinDetailController.m */,
+				84FD94351A26CAE9001EE96F /* UITransLocationController.m */,
+				84FD94371A26CB05001EE96F /* UITransLocationController.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -990,6 +998,8 @@
 		84FD94211A26BA74001EE96F /* MapView */ = {
 			isa = PBXGroup;
 			children = (
+				84FD94321A26BF6D001EE96F /* Item.h */,
+				84FD94331A26BF6D001EE96F /* Item.m */,
 				84FD94221A26BA74001EE96F /* JingDianMapCell.h */,
 				84FD94231A26BA74001EE96F /* JingDianMapCell.m */,
 				84FD94241A26BA74001EE96F /* MapCalloutView */,
@@ -1200,6 +1210,7 @@
 				849A764A1A0C719C00D68F57 /* ETRPLine.m in Sources */,
 				8496495F1A1F424D006893C2 /* SwipeListTableView.m in Sources */,
 				84482DFB19F7A16B00DD701B /* ETNetworkHelper.m in Sources */,
+				84FD94341A26BF6D001EE96F /* Item.m in Sources */,
 				848F86031A16F67F0094BD7D /* UICheckinController.m in Sources */,
 				842683A31A1E266B00D79F5C /* CheckInCell.m in Sources */,
 				84482DA319F793F800DD701B /* AppDelegate.m in Sources */,
@@ -1249,6 +1260,7 @@
 				849A76481A0C6F3900D68F57 /* ETBase.m in Sources */,
 				8426839B1A1E166300D79F5C /* OrderInfoCell.m in Sources */,
 				8496463A1A1ED506006893C2 /* ASIInputStream.m in Sources */,
+				84FD94361A26CAE9001EE96F /* UITransLocationController.m in Sources */,
 				8486F6561A23077300C11A59 /* ETContactor.m in Sources */,
 				8486F66A1A23502100C11A59 /* ETTransLocation.m in Sources */,
 				84482E1019F7A50900DD701B /* ETFormatHelper.m in Sources */,
