@@ -15,10 +15,6 @@
 #import "ETNRPLine.h"
 
 
-#define HELVETICANEUE_FONT(s) [UIFont fontWithName:@"HelveticaNeue" size:s]
-#define HELVETICANEUEMEDIUM_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Bold" size:s]
-#define HELVETICANEUEBOLD_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Medium" size:s]
-
 #define TommrowDate [[NSDate alloc] initWithTimeIntervalSinceNow:24 *60 *60];
 
 @interface UITransportationController ()
@@ -84,7 +80,7 @@
                                         , self.view.frame.size.width, titleViewHeight)];
     [self.titleView setBackgroundColor:[ETColor colorWithHexString:@"#f6f6f6"]];
     [self.lblTitle setFrame:CGRectMake(leftMargin, 28, 300, 24)];
-    self.lblTitle.font = HELVETICANEUEBOLD_FONT(24);
+    self.lblTitle.font = [self HELVETICANEUEBOLD_FONT:24];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MM/dd/yyyy"];

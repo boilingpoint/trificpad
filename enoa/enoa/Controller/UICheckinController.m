@@ -13,10 +13,6 @@
 #import "UINotificationController.h"
 
 
-#define HELVETICANEUE_FONT(s) [UIFont fontWithName:@"HelveticaNeue" size:s]
-#define HELVETICANEUEMEDIUM_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Bold" size:s]
-#define HELVETICANEUEBOLD_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Medium" size:s]
-
 @interface UICheckinController ()
 
 @end
@@ -59,8 +55,8 @@
     [self.controlView setFrame:CGRectMake(0, self.tabNav.frame.origin.y
                                           +self.tabNav.frame.size.height
                                           , self.view.frame.size.width, ctrlViewHeight)];
-    self.timeLabel.font = HELVETICANEUEBOLD_FONT(24);
-    self.alertLabel.font = HELVETICANEUEBOLD_FONT(24);
+    self.timeLabel.font = [self HELVETICANEUEBOLD_FONT:24];
+    self.alertLabel.font = [self HELVETICANEUEBOLD_FONT:24];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MM/dd/yyyy"];

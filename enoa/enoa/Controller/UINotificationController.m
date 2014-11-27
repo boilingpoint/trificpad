@@ -14,11 +14,6 @@
 #import "ETColor.h"
 
 
-
-#define HELVETICANEUE_FONT(s) [UIFont fontWithName:@"HelveticaNeue" size:s]
-#define HELVETICANEUEMEDIUM_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Bold" size:s]
-#define HELVETICANEUEBOLD_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Medium" size:s]
-
 #define NAV_HEIGHT 60.0f
 #define NAV_X 0
 #define NAV_Y 20

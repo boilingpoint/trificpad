@@ -37,8 +37,8 @@
         fontName = @"Heiti SC";
     }
     UILabel *lbl = [[UILabel alloc] initWithFrame:rect];
-    [lbl setNumberOfLines:0];
-    lbl.lineBreakMode = UILineBreakModeWordWrap;
+    lbl.numberOfLines = 3;
+    //lbl.lineBreakMode = UILineBreakModeWordWrap;
     
     [lbl setFont:[UIFont fontWithName:fontName size:fontSize]];
     [lbl setTextColor:color];
@@ -74,9 +74,9 @@
     [lbl setTextColor:color];
     [lbl setText:(text != nil && (NSNull *)text != [NSNull null] ? text : @"")];
     
-    CGSize size = CGSizeMake(rect.size.width, 1000);
+    //CGSize size = CGSizeMake(rect.size.width, 1000);
     
-    NSDictionary *tdic = [NSDictionary dictionaryWithObjectsAndKeys:lbl.font, NSFontAttributeName, nil];
+    //NSDictionary *tdic = [NSDictionary dictionaryWithObjectsAndKeys:lbl.font, NSFontAttributeName, nil];
     CGSize actualsize = [text sizeWithFont:[UIFont fontWithName:fontName size:fontSize] constrainedToSize:CGSizeMake(rect.size.width, MAXFLOAT) lineBreakMode:UILineBreakModeTailTruncation];
     //actualsize = [text boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:tdic context:nil].size;
     CGFloat x = rect.origin.x;

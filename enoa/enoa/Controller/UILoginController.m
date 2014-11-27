@@ -12,10 +12,6 @@
 #import "ETColor.h"
 
 
-
-#define HELVETICANEUE_FONT(s) [UIFont fontWithName:@"HelveticaNeue" size:s]
-#define HELVETICANEUEMEDIUM_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Bold" size:s]
-#define HELVETICANEUEBOLD_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Medium" size:s]
 #define URL_FINDPASSWORD @"http://tangseng.totalgds.com/retrieve_password/retrieve_password"
 
 @interface UILoginController ()
@@ -53,20 +49,20 @@
                                      66)];
     [self.btnFindPassword setFrame:CGRectMake(self.view.frame.size.width - 300, 40, 150, 50)];
     
-    self.btnFindPassword.font = HELVETICANEUE_FONT(14.0f);
+    self.btnFindPassword.font = [self HELVETICANEUE_FONT:14.0f];
     [self.btnFindPassword setTitle:@"Forgot Password" forState:UIControlStateNormal];
     
-    self.txtUserName.font = HELVETICANEUE_FONT(30.0f);
+    self.txtUserName.font = [self HELVETICANEUE_FONT:30.0f];
     self.txtUserName.placeholder = @"Username";
     self.txtUserName.returnKeyType = UIReturnKeyNext;
     
-    self.txtPassword.font = HELVETICANEUE_FONT(30.0f);
+    self.txtPassword.font = [self HELVETICANEUE_FONT:30.0f];
     self.txtPassword.placeholder = @"Password";
     self.txtPassword.secureTextEntry = YES;
     self.txtPassword.returnKeyType = UIReturnKeyDone;
     self.txtPassword.delegate = self;
     
-    self.btnLogin.font = HELVETICANEUE_FONT(30.0f);
+    self.btnLogin.font = [self HELVETICANEUE_FONT:30.0f];
     
     [self.btnLogin setTitle:@"Login" forState:UIControlStateNormal];
     

@@ -17,10 +17,6 @@
 #import "JingDianMapCell.h"
 
 
-#define HELVETICANEUE_FONT(s) [UIFont fontWithName:@"HelveticaNeue" size:s]
-#define HELVETICANEUEMEDIUM_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Bold" size:s]
-#define HELVETICANEUEBOLD_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Medium" size:s]
-
 @interface UITransLocationController ()
 
 @property ETRPLine *rpline;
@@ -69,7 +65,7 @@
                                           +self.tabNav.frame.size.height
                                           , self.view.frame.size.width, ctrlViewHeight)];
     
-    self.lblInfo.font = HELVETICANEUEBOLD_FONT(24);
+    self.lblInfo.font = [self HELVETICANEUEBOLD_FONT:24];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MM/dd/yyyy"];
@@ -143,7 +139,7 @@
     //myView.backgroundColor = [ETColor colorWithHexString:@"#e1e1e1"];
     UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, self.tableView.frame.size.width, 72)];
     lbl.text = [NSString stringWithFormat:@"%@, %@, Location Total:%d",location.Time, location.Location, location.Pax];
-    lbl.font = HELVETICANEUEBOLD_FONT(18);
+    lbl.font = [self HELVETICANEUEBOLD_FONT:18];
     [myView addSubview:lbl];
     [myView setBackgroundColor:[ETColor colorWithHexString:@"#f6f6f6"]];
     return myView;

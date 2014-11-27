@@ -173,7 +173,6 @@
 		84FD942F1A26BA74001EE96F /* CallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD94281A26BA74001EE96F /* CallOutAnnotationView.m */; };
 		84FD94301A26BA74001EE96F /* CalloutMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD942A1A26BA74001EE96F /* CalloutMapAnnotation.m */; };
 		84FD94311A26BA74001EE96F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD942C1A26BA74001EE96F /* MapView.m */; };
-		84FD94341A26BF6D001EE96F /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD94331A26BF6D001EE96F /* Item.m */; };
 		84FD94361A26CAE9001EE96F /* UITransLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD94351A26CAE9001EE96F /* UITransLocationController.m */; };
 /* End PBXBuildFile section */
 
@@ -454,8 +453,6 @@
 		84FD942A1A26BA74001EE96F /* CalloutMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutMapAnnotation.m; sourceTree = "<group>"; };
 		84FD942B1A26BA74001EE96F /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		84FD942C1A26BA74001EE96F /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
-		84FD94321A26BF6D001EE96F /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		84FD94331A26BF6D001EE96F /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		84FD94351A26CAE9001EE96F /* UITransLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITransLocationController.m; path = Controller/UITransLocationController.m; sourceTree = "<group>"; };
 		84FD94371A26CB05001EE96F /* UITransLocationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UITransLocationController.h; path = Controller/UITransLocationController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -998,8 +995,6 @@
 		84FD94211A26BA74001EE96F /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				84FD94321A26BF6D001EE96F /* Item.h */,
-				84FD94331A26BF6D001EE96F /* Item.m */,
 				84FD94221A26BA74001EE96F /* JingDianMapCell.h */,
 				84FD94231A26BA74001EE96F /* JingDianMapCell.m */,
 				84FD94241A26BA74001EE96F /* MapCalloutView */,
@@ -1210,7 +1205,6 @@
 				849A764A1A0C719C00D68F57 /* ETRPLine.m in Sources */,
 				8496495F1A1F424D006893C2 /* SwipeListTableView.m in Sources */,
 				84482DFB19F7A16B00DD701B /* ETNetworkHelper.m in Sources */,
-				84FD94341A26BF6D001EE96F /* Item.m in Sources */,
 				848F86031A16F67F0094BD7D /* UICheckinController.m in Sources */,
 				842683A31A1E266B00D79F5C /* CheckInCell.m in Sources */,
 				84482DA319F793F800DD701B /* AppDelegate.m in Sources */,

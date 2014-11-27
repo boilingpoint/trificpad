@@ -156,4 +156,22 @@ static float progress = 0.0f;
     }
     [ETProgressHUD showErrorWithStatus:message];
 }
+
+#pragma font
+
+-(UIFont *)HELVETICANEUE_FONT:(NSInteger)size
+{
+    return [UIFont fontWithName:@"HelveticaNeue" size:size];
+}
+
+-(UIFont *)HELVETICANEUEMEDIUM_FONT:(NSInteger)size
+{
+    return [UIFont fontWithName:@"HelveticaNeue-Medium" size:size];
+}
+
+-(UIFont *)HELVETICANEUEBOLD_FONT:(NSInteger)size
+{
+    return [UIFont fontWithName:@"HelveticaNeue-Bold" size:size];
+}
+
 @end

@@ -18,11 +18,6 @@
 //#import "AdditionalDetailView.h"
 
 
-
-#define HELVETICANEUE_FONT(s) [UIFont fontWithName:@"HelveticaNeue" size:s]
-#define HELVETICANEUEMEDIUM_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Bold" size:s]
-#define HELVETICANEUEBOLD_FONT(s) [UIFont fontWithName:@"HelveticaNeue-Medium" size:s]
-
 @interface UICheckinDetailController ()
 
 @end
@@ -103,7 +98,7 @@
                                           +self.tabNav.frame.size.height
                                           , self.view.frame.size.width, ctrlViewHeight)];
     
-    self.lblInfo.font = HELVETICANEUEBOLD_FONT(24);
+    self.lblInfo.font = [self HELVETICANEUEBOLD_FONT:24];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MM/dd/yyyy"];
@@ -113,7 +108,7 @@
     self.lblInfo.lineBreakMode = UILineBreakModeWordWrap;
     self.lblInfo.numberOfLines = 3;
     
-    self.lblInventory.font = HELVETICANEUE_FONT(18);
+    self.lblInventory.font = [self HELVETICANEUE_FONT:18];
     [self.lblInventory setText:[NSString stringWithFormat:@"Inventory Availability: %d  of %d ", 5, 200]];
     [self.lblInventory setFrame:CGRectMake(leftMargin, 42, 602, 74)];
     
@@ -227,21 +222,21 @@
     
     UILabel *contactLabel = [[UILabel alloc] initWithFrame:CGRectMake(expendIconWidth, 0, contactorWidth,height)];
     contactLabel.text = @"FirstName LastName";
-    contactLabel.font = HELVETICANEUE_FONT(18);
+    contactLabel.font = [self HELVETICANEUE_FONT:18];
     UILabel *paxLabel = [[UILabel alloc] initWithFrame:CGRectMake(expendIconWidth + contactorWidth, 0, paxWidth,height)];
     paxLabel.text = @"12";
-    paxLabel.font = HELVETICANEUE_FONT(18);
+    paxLabel.font = [self HELVETICANEUE_FONT:18];
     for(int i=0;i<2;i++)
     {
         UILabel *paxTypeLabel = [[UILabel alloc] initWithFrame:CGRectMake(expendIconWidth + contactorWidth + paxWidth, i*18, paxTypeWidth,height)];
         paxTypeLabel.text = @"Adult-12";
-        paxTypeLabel.font = HELVETICANEUE_FONT(18);
+        paxTypeLabel.font = [self HELVETICANEUE_FONT:18];
         [expendHeaderView addSubview:paxTypeLabel];
     }
     
     UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.tableView.frame.size.width - operatorWidth, 0, priceWidth,height)];
     priceLabel.text = @"US$ 240.00";
-    priceLabel.font = HELVETICANEUE_FONT(18);
+    priceLabel.font = [self HELVETICANEUE_FONT:18];
     UIImageView *waitingImage = [[UIImageView alloc] initWithFrame:CGRectMake(self.tableView.frame.size.width - leftMargin - noshowWidth - checkinWidth - (waitingWidth - stateWidth)/2, 20, stateWidth, stateWidth)];
     [waitingImage setImage:[UIImage imageNamed:@"icon_input_gray.png"]];
     UIImageView *checkinImage = [[UIImageView alloc] initWithFrame:CGRectMake(self.tableView.frame.size.width - leftMargin - noshowWidth - (checkinWidth - stateWidth)/2, 20, stateWidth, stateWidth)];

@@ -31,4 +31,8 @@
 
 -(bool)isNetworkConnected;
 -(void)SetObject:(id)object ByKey:(NSString *)key;
+
+-(UIFont *)HELVETICANEUE_FONT:(NSInteger)size;
+-(UIFont *)HELVETICANEUEMEDIUM_FONT:(NSInteger)size;
+-(UIFont *)HELVETICANEUEBOLD_FONT:(NSInteger)size;
 @end
