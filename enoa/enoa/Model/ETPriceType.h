@@ -15,11 +15,11 @@
 @interface ETPriceType : ETBase
 {
     NSString *title;
-    NSInteger *num;
+    NSInteger num;
 }
 
 @property NSString *Title;
-@property NSInteger *Num;
+@property NSInteger Num;
 
 @end
 

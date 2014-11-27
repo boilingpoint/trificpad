@@ -11,12 +11,6 @@
 		8422920919F88A8400EE3943 /* MainStoryBoard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8422920819F88A8400EE3943 /* MainStoryBoard_iPhone.storyboard */; };
 		8422920D19F89EAE00EE3943 /* UIMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8422920C19F89EAE00EE3943 /* UIMapController.m */; };
 		8422921019F8A79300EE3943 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8422920F19F8A79300EE3943 /* MapKit.framework */; };
-		842294E519F8B44600EE3943 /* BasicMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 842294DD19F8B44600EE3943 /* BasicMapAnnotation.m */; };
-		842294E619F8B44600EE3943 /* CallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842294DF19F8B44600EE3943 /* CallOutAnnotationView.m */; };
-		842294E719F8B44600EE3943 /* CalloutMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 842294E119F8B44600EE3943 /* CalloutMapAnnotation.m */; };
-		842294E819F8B44600EE3943 /* JingDianMapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842294E319F8B44600EE3943 /* JingDianMapCell.m */; };
-		842294E919F8B44600EE3943 /* JingDianMapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842294E419F8B44600EE3943 /* JingDianMapCell.xib */; };
-		842294EC19F9DDB800EE3943 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842294EB19F9DDB800EE3943 /* MapViewController.m */; };
 		842683811A1AF8A600D79F5C /* UITransportationDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842683801A1AF8A600D79F5C /* UITransportationDetailController.m */; };
 		842683841A1B4D8400D79F5C /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 842683831A1B4D8400D79F5C /* default.png */; };
 		842683861A1D9E9500D79F5C /* UICheckinDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842683851A1D9E9500D79F5C /* UICheckinDetailController.m */; };
@@ -91,6 +85,8 @@
 		8486F66A1A23502100C11A59 /* ETTransLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F6691A23502100C11A59 /* ETTransLocation.m */; };
 		8486F66C1A2429AC00C11A59 /* ETAddon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F66B1A2429AC00C11A59 /* ETAddon.m */; };
 		8486F66E1A2429BE00C11A59 /* ETAdditionalQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486F66D1A2429BE00C11A59 /* ETAdditionalQuestion.m */; };
+		8486F68F1A2487DB00C11A59 /* icon_map_but.png in Resources */ = {isa = PBXBuildFile; fileRef = 8486F68D1A2487DB00C11A59 /* icon_map_but.png */; };
+		8486F6901A2487DB00C11A59 /* icon_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8486F68E1A2487DB00C11A59 /* icon_pin.png */; };
 		848BE0A41A198CD90076D51A /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE0A21A198CD90076D51A /* Icon-60@2x.png */; };
 		848BE0A51A198CD90076D51A /* trip_report_but@18.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE0A31A198CD90076D51A /* trip_report_but@18.png */; };
 		848BE0B01A198E0E0076D51A /* icon_16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE0A61A198E0E0076D51A /* icon_16x16.png */; };
@@ -123,7 +119,6 @@
 		848BE1481A198E660076D51A /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE13E1A198E660076D51A /* Icon-Small@2x.png */; };
 		848BE1491A198E660076D51A /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE13F1A198E660076D51A /* iTunesArtwork.png */; };
 		848BE14A1A198E660076D51A /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848BE1401A198E660076D51A /* iTunesArtwork@2x.png */; };
-		848F86001A16F57C0094BD7D /* UITransportationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F85FF1A16F57C0094BD7D /* UITransportationController.m */; };
 		848F86031A16F67F0094BD7D /* UICheckinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F86021A16F67F0094BD7D /* UICheckinController.m */; };
 		849646341A1ED506006893C2 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 849646211A1ED506006893C2 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		849646351A1ED506006893C2 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 849646241A1ED506006893C2 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -171,6 +166,13 @@
 		849A797C1A1600CF00D68F57 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 849A797B1A1600CF00D68F57 /* login.png */; };
 		849A79801A16046200D68F57 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 849A797E1A16046200D68F57 /* GTMBase64.m */; };
 		849A79841A161D9800D68F57 /* UILoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849A79831A161D9800D68F57 /* UILoginController.m */; };
+		849CE0F81A25BFED001D1149 /* map_but.png in Resources */ = {isa = PBXBuildFile; fileRef = 849CE0F71A25BFED001D1149 /* map_but.png */; };
+		84FD941F1A26AE91001EE96F /* UITransportationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD941E1A26AE91001EE96F /* UITransportationController.m */; };
+		84FD942D1A26BA74001EE96F /* JingDianMapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD94231A26BA74001EE96F /* JingDianMapCell.m */; };
+		84FD942E1A26BA74001EE96F /* BasicMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD94261A26BA74001EE96F /* BasicMapAnnotation.m */; };
+		84FD942F1A26BA74001EE96F /* CallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD94281A26BA74001EE96F /* CallOutAnnotationView.m */; };
+		84FD94301A26BA74001EE96F /* CalloutMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD942A1A26BA74001EE96F /* CalloutMapAnnotation.m */; };
+		84FD94311A26BA74001EE96F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FD942C1A26BA74001EE96F /* MapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,22 +191,9 @@
 		8422920C19F89EAE00EE3943 /* UIMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIMapController.m; path = Controller/UIMapController.m; sourceTree = "<group>"; };
 		8422920E19F89EC000EE3943 /* UIMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIMapController.h; path = Controller/UIMapController.h; sourceTree = "<group>"; };
 		8422920F19F8A79300EE3943 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		842294DC19F8B44600EE3943 /* BasicMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicMapAnnotation.h; sourceTree = "<group>"; };
-		842294DD19F8B44600EE3943 /* BasicMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicMapAnnotation.m; sourceTree = "<group>"; };
-		842294DE19F8B44600EE3943 /* CallOutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallOutAnnotationView.h; sourceTree = "<group>"; };
-		842294DF19F8B44600EE3943 /* CallOutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallOutAnnotationView.m; sourceTree = "<group>"; };
-		842294E019F8B44600EE3943 /* CalloutMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutMapAnnotation.h; sourceTree = "<group>"; };
-		842294E119F8B44600EE3943 /* CalloutMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutMapAnnotation.m; sourceTree = "<group>"; };
-		842294E219F8B44600EE3943 /* JingDianMapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JingDianMapCell.h; sourceTree = "<group>"; };
-		842294E319F8B44600EE3943 /* JingDianMapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JingDianMapCell.m; sourceTree = "<group>"; };
-		842294E419F8B44600EE3943 /* JingDianMapCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JingDianMapCell.xib; sourceTree = "<group>"; };
-		842294EA19F9DDB800EE3943 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = enoa/Controller/MapViewController.h; sourceTree = SOURCE_ROOT; };
-		842294EB19F9DDB800EE3943 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = enoa/Controller/MapViewController.m; sourceTree = SOURCE_ROOT; };
 		842683801A1AF8A600D79F5C /* UITransportationDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITransportationDetailController.m; path = Controller/UITransportationDetailController.m; sourceTree = "<group>"; };
-		842683821A1AF8D500D79F5C /* UITransportationDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITransportationDetailController.h; sourceTree = "<group>"; };
 		842683831A1B4D8400D79F5C /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default.png; path = Images/default.png; sourceTree = "<group>"; };
 		842683851A1D9E9500D79F5C /* UICheckinDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICheckinDetailController.m; path = Controller/UICheckinDetailController.m; sourceTree = "<group>"; };
-		842683871A1D9EAE00D79F5C /* UICheckinDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICheckinDetailController.h; sourceTree = "<group>"; };
 		8426838C1A1DC6D200D79F5C /* AdditionalDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdditionalDetailView.m; path = Controller/AdditionalInfoCell/AdditionalDetailView.m; sourceTree = "<group>"; };
 		8426838F1A1DC6FE00D79F5C /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = Controller/AdditionalInfoCell/Model.m; sourceTree = "<group>"; };
 		842683911A1DC71800D79F5C /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Model.h; path = Controller/AdditionalInfoCell/Model.h; sourceTree = "<group>"; };
@@ -321,6 +310,8 @@
 		8486F6691A23502100C11A59 /* ETTransLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETTransLocation.m; path = Model/ETTransLocation.m; sourceTree = "<group>"; };
 		8486F66B1A2429AC00C11A59 /* ETAddon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETAddon.m; path = Model/ETAddon.m; sourceTree = "<group>"; };
 		8486F66D1A2429BE00C11A59 /* ETAdditionalQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ETAdditionalQuestion.m; path = Model/ETAdditionalQuestion.m; sourceTree = "<group>"; };
+		8486F68D1A2487DB00C11A59 /* icon_map_but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_map_but.png; path = Images/icon_map_but.png; sourceTree = "<group>"; };
+		8486F68E1A2487DB00C11A59 /* icon_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_pin.png; path = Images/icon_pin.png; sourceTree = "<group>"; };
 		848BE0A11A18EE3D0076D51A /* MCSwipeTableViewCell-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MCSwipeTableViewCell-Prefix.pch"; path = "Library/MCSwipeTable/MCSwipeTableViewCell-Prefix.pch"; sourceTree = "<group>"; };
 		848BE0A21A198CD90076D51A /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Images/Icon-60@2x.png"; sourceTree = "<group>"; };
 		848BE0A31A198CD90076D51A /* trip_report_but@18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trip_report_but@18.png"; path = "Images/trip_report_but@18.png"; sourceTree = "<group>"; };
@@ -354,7 +345,6 @@
 		848BE13E1A198E660076D51A /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		848BE13F1A198E660076D51A /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		848BE1401A198E660076D51A /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		848F85FF1A16F57C0094BD7D /* UITransportationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITransportationController.m; sourceTree = "<group>"; };
 		848F86011A16F5960094BD7D /* UITransportationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UITransportationController.h; path = Controller/UITransportationController.h; sourceTree = "<group>"; };
 		848F86021A16F67F0094BD7D /* UICheckinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICheckinController.m; path = Controller/UICheckinController.m; sourceTree = "<group>"; };
 		848F86041A16F68C0094BD7D /* UICheckinController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UICheckinController.h; path = Controller/UICheckinController.h; sourceTree = "<group>"; };
@@ -448,6 +438,20 @@
 		849A797F1A16046200D68F57 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = Library/GTM/GTMDefines.h; sourceTree = "<group>"; };
 		849A79821A161D9800D68F57 /* UILoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UILoginController.h; path = Controller/UILoginController.h; sourceTree = "<group>"; };
 		849A79831A161D9800D68F57 /* UILoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UILoginController.m; path = Controller/UILoginController.m; sourceTree = "<group>"; };
+		849CE0F71A25BFED001D1149 /* map_but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map_but.png; path = Images/map_but.png; sourceTree = "<group>"; };
+		84FD941D1A26AE91001EE96F /* UICheckinDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICheckinDetailController.h; path = Controller/UICheckinDetailController.h; sourceTree = "<group>"; };
+		84FD941E1A26AE91001EE96F /* UITransportationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITransportationController.m; path = Controller/UITransportationController.m; sourceTree = "<group>"; };
+		84FD94201A26B97E001EE96F /* UITransportationDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITransportationDetailController.h; path = Controller/UITransportationDetailController.h; sourceTree = "<group>"; };
+		84FD94221A26BA74001EE96F /* JingDianMapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JingDianMapCell.h; sourceTree = "<group>"; };
+		84FD94231A26BA74001EE96F /* JingDianMapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JingDianMapCell.m; sourceTree = "<group>"; };
+		84FD94251A26BA74001EE96F /* BasicMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicMapAnnotation.h; sourceTree = "<group>"; };
+		84FD94261A26BA74001EE96F /* BasicMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicMapAnnotation.m; sourceTree = "<group>"; };
+		84FD94271A26BA74001EE96F /* CallOutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallOutAnnotationView.h; sourceTree = "<group>"; };
+		84FD94281A26BA74001EE96F /* CallOutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallOutAnnotationView.m; sourceTree = "<group>"; };
+		84FD94291A26BA74001EE96F /* CalloutMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutMapAnnotation.h; sourceTree = "<group>"; };
+		84FD942A1A26BA74001EE96F /* CalloutMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutMapAnnotation.m; sourceTree = "<group>"; };
+		84FD942B1A26BA74001EE96F /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		84FD942C1A26BA74001EE96F /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,32 +478,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8422921119F8B36700EE3943 /* CustomMapCalloutView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CustomMapCalloutView;
-			sourceTree = "<group>";
-		};
-		842294DB19F8B44600EE3943 /* CustomMapCalloutView */ = {
-			isa = PBXGroup;
-			children = (
-				842294EA19F9DDB800EE3943 /* MapViewController.h */,
-				842294EB19F9DDB800EE3943 /* MapViewController.m */,
-				842294DC19F8B44600EE3943 /* BasicMapAnnotation.h */,
-				842294DD19F8B44600EE3943 /* BasicMapAnnotation.m */,
-				842294DE19F8B44600EE3943 /* CallOutAnnotationView.h */,
-				842294DF19F8B44600EE3943 /* CallOutAnnotationView.m */,
-				842294E019F8B44600EE3943 /* CalloutMapAnnotation.h */,
-				842294E119F8B44600EE3943 /* CalloutMapAnnotation.m */,
-				842294E219F8B44600EE3943 /* JingDianMapCell.h */,
-				842294E319F8B44600EE3943 /* JingDianMapCell.m */,
-				842294E419F8B44600EE3943 /* JingDianMapCell.xib */,
-			);
-			name = CustomMapCalloutView;
-			path = Library/UIHelper/CustomMapCalloutView;
-			sourceTree = "<group>";
-		};
 		8426838B1A1DC68D00D79F5C /* AdditionalInfoCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,16 +584,16 @@
 				84482DE519F79FF100DD701B /* UIBaseController.h */,
 				8422920C19F89EAE00EE3943 /* UIMapController.m */,
 				8422920E19F89EC000EE3943 /* UIMapController.h */,
-				848F85FF1A16F57C0094BD7D /* UITransportationController.m */,
+				84FD941E1A26AE91001EE96F /* UITransportationController.m */,
 				848F86011A16F5960094BD7D /* UITransportationController.h */,
 				848F86021A16F67F0094BD7D /* UICheckinController.m */,
 				848F86041A16F68C0094BD7D /* UICheckinController.h */,
 				844754301A177DBD0005F2DA /* UINotificationController.h */,
 				844754311A177DD30005F2DA /* UINotificationController.m */,
 				842683801A1AF8A600D79F5C /* UITransportationDetailController.m */,
-				842683821A1AF8D500D79F5C /* UITransportationDetailController.h */,
+				84FD94201A26B97E001EE96F /* UITransportationDetailController.h */,
+				84FD941D1A26AE91001EE96F /* UICheckinDetailController.h */,
 				842683851A1D9E9500D79F5C /* UICheckinDetailController.m */,
-				842683871A1D9EAE00D79F5C /* UICheckinDetailController.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -670,12 +648,12 @@
 		84482DE619F7A08E00DD701B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				84FD94211A26BA74001EE96F /* MapView */,
 				849649611A21C7C0006893C2 /* SWTableView */,
 				8496495D1A1F420F006893C2 /* SwipeListView */,
 				8496490E1A1ED5B1006893C2 /* Jastor */,
 				8496463C1A1ED50B006893C2 /* ASIHttpRequest */,
 				849A76521A0CB4C100D68F57 /* MCSwipeTable */,
-				8422921119F8B36700EE3943 /* CustomMapCalloutView */,
 				84482E9619F7A5D200DD701B /* SVHTTPRequest */,
 				84482E0D19F7A48A00DD701B /* Helper */,
 				84482E0919F7A44E00DD701B /* AIMTableViewIndexBar */,
@@ -721,7 +699,6 @@
 			isa = PBXGroup;
 			children = (
 				849A79811A16046E00D68F57 /* GTMBase */,
-				842294DB19F8B44600EE3943 /* CustomMapCalloutView */,
 				84482E1119F7A56800DD701B /* ETDictionary.h */,
 				84482E1219F7A56800DD701B /* ETDictionary.m */,
 				84482E0E19F7A50900DD701B /* ETFormatHelper.h */,
@@ -949,6 +926,9 @@
 		849A76561A15D4DF00D68F57 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				849CE0F71A25BFED001D1149 /* map_but.png */,
+				8486F68D1A2487DB00C11A59 /* icon_map_but.png */,
+				8486F68E1A2487DB00C11A59 /* icon_pin.png */,
 				8496494C1A1F3216006893C2 /* MCSwipe */,
 				842683961A1DDE3B00D79F5C /* icon_input_orange.png */,
 				842683971A1DDE3B00D79F5C /* icon_input_red.png */,
@@ -1005,6 +985,32 @@
 				849A797F1A16046200D68F57 /* GTMDefines.h */,
 			);
 			name = GTMBase;
+			sourceTree = "<group>";
+		};
+		84FD94211A26BA74001EE96F /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				84FD94221A26BA74001EE96F /* JingDianMapCell.h */,
+				84FD94231A26BA74001EE96F /* JingDianMapCell.m */,
+				84FD94241A26BA74001EE96F /* MapCalloutView */,
+				84FD942B1A26BA74001EE96F /* MapView.h */,
+				84FD942C1A26BA74001EE96F /* MapView.m */,
+			);
+			name = MapView;
+			path = Library/MapView;
+			sourceTree = "<group>";
+		};
+		84FD94241A26BA74001EE96F /* MapCalloutView */ = {
+			isa = PBXGroup;
+			children = (
+				84FD94251A26BA74001EE96F /* BasicMapAnnotation.h */,
+				84FD94261A26BA74001EE96F /* BasicMapAnnotation.m */,
+				84FD94271A26BA74001EE96F /* CallOutAnnotationView.h */,
+				84FD94281A26BA74001EE96F /* CallOutAnnotationView.m */,
+				84FD94291A26BA74001EE96F /* CalloutMapAnnotation.h */,
+				84FD942A1A26BA74001EE96F /* CalloutMapAnnotation.m */,
+			);
+			path = MapCalloutView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1113,7 +1119,9 @@
 				848BE1331A198E550076D51A /* Icon@2x.png in Resources */,
 				848BE0A41A198CD90076D51A /* Icon-60@2x.png in Resources */,
 				848BE1441A198E660076D51A /* Icon-60@2x.png in Resources */,
+				8486F6901A2487DB00C11A59 /* icon_pin.png in Resources */,
 				844754681A1859F40005F2DA /* icon_transportation_gray.png in Resources */,
+				849CE0F81A25BFED001D1149 /* map_but.png in Resources */,
 				848BE0B51A198E0E0076D51A /* icon_128x128@2x.png in Resources */,
 				848BE0B71A198E0E0076D51A /* icon_256x256@2x.png in Resources */,
 				844754611A1859F40005F2DA /* icon_input_gray.png in Resources */,
@@ -1122,7 +1130,6 @@
 				8447545C1A1859F40005F2DA /* icon_checkin.png in Resources */,
 				8447545F1A1859F40005F2DA /* icon_home_gray.png in Resources */,
 				848BE0B11A198E0E0076D51A /* icon_16x16@2x.png in Resources */,
-				842294E919F8B44600EE3943 /* JingDianMapCell.xib in Resources */,
 				848BE1431A198E660076D51A /* Icon-60.png in Resources */,
 				848BE1481A198E660076D51A /* Icon-Small@2x.png in Resources */,
 				844754641A1859F40005F2DA /* icon_logo.png in Resources */,
@@ -1139,6 +1146,7 @@
 				848BE12C1A198E550076D51A /* Icon-72.png in Resources */,
 				848BE0A51A198CD90076D51A /* trip_report_but@18.png in Resources */,
 				84482DAE19F793F800DD701B /* Images.xcassets in Resources */,
+				8486F68F1A2487DB00C11A59 /* icon_map_but.png in Resources */,
 				844754571A1859F40005F2DA /* home_checkin_current.png in Resources */,
 				848BE1301A198E550076D51A /* Icon-Small.png in Resources */,
 				849649541A1F323B006893C2 /* check@2x.png in Resources */,
@@ -1188,13 +1196,11 @@
 				84482DF919F7A16B00DD701B /* ETColor.m in Sources */,
 				8486F6591A23079A00C11A59 /* ETDriver.m in Sources */,
 				8496493A1A1EEFD2006893C2 /* ASICloudFilesCDNRequest.m in Sources */,
-				842294E619F8B44600EE3943 /* CallOutAnnotationView.m in Sources */,
 				8486F66E1A2429BE00C11A59 /* ETAdditionalQuestion.m in Sources */,
 				849A764A1A0C719C00D68F57 /* ETRPLine.m in Sources */,
 				8496495F1A1F424D006893C2 /* SwipeListTableView.m in Sources */,
 				84482DFB19F7A16B00DD701B /* ETNetworkHelper.m in Sources */,
 				848F86031A16F67F0094BD7D /* UICheckinController.m in Sources */,
-				842294E719F8B44600EE3943 /* CalloutMapAnnotation.m in Sources */,
 				842683A31A1E266B00D79F5C /* CheckInCell.m in Sources */,
 				84482DA319F793F800DD701B /* AppDelegate.m in Sources */,
 				849649641A21C7C0006893C2 /* SWTableViewCell.m in Sources */,
@@ -1203,9 +1209,9 @@
 				8486F6621A2311C100C11A59 /* ETCheckinInfo.m in Sources */,
 				84482E0C19F7A46200DD701B /* AIMTableViewIndexBar.m in Sources */,
 				84482DE419F79FE400DD701B /* UIBaseController.m in Sources */,
-				848F86001A16F57C0094BD7D /* UITransportationController.m in Sources */,
 				849649401A1EEFD2006893C2 /* ASICloudFilesRequest.m in Sources */,
 				849A79841A161D9800D68F57 /* UILoginController.m in Sources */,
+				84FD94311A26BA74001EE96F /* MapView.m in Sources */,
 				8486F6651A23132400C11A59 /* ETOrderInfo.m in Sources */,
 				844754321A177DD30005F2DA /* UINotificationController.m in Sources */,
 				84482DFE19F7A16B00DD701B /* ETRefreshTableHeaderView.m in Sources */,
@@ -1217,14 +1223,16 @@
 				84482DDD19F79C9200DD701B /* ETUser.m in Sources */,
 				849649461A1EEFD2006893C2 /* ASIS3Request.m in Sources */,
 				84482E0119F7A16B00DD701B /* UITableView.m in Sources */,
-				842294E819F8B44600EE3943 /* JingDianMapCell.m in Sources */,
 				8486F65F1A23104400C11A59 /* ETNotification.m in Sources */,
 				8426839E1A1E1A2600D79F5C /* OrderDetailView.m in Sources */,
 				849646381A1ED506006893C2 /* ASIFormDataRequest.m in Sources */,
 				842683951A1DC78900D79F5C /* AdditionalInfoCell.m in Sources */,
 				849A76511A0CB4B800D68F57 /* MCSwipeTableViewCell.m in Sources */,
+				84FD942D1A26BA74001EE96F /* JingDianMapCell.m in Sources */,
+				84FD94301A26BA74001EE96F /* CalloutMapAnnotation.m in Sources */,
 				849A76551A15B36C00D68F57 /* ETButton.m in Sources */,
 				8496493F1A1EEFD2006893C2 /* ASICloudFilesObjectRequest.m in Sources */,
+				84FD942E1A26BA74001EE96F /* BasicMapAnnotation.m in Sources */,
 				849649441A1EEFD2006893C2 /* ASIS3BucketRequest.m in Sources */,
 				84482DA619F793F800DD701B /* enoa.xcdatamodeld in Sources */,
 				849649421A1EEFD2006893C2 /* ASIS3Bucket.m in Sources */,
@@ -1232,7 +1240,6 @@
 				849646361A1ED506006893C2 /* ASIDataDecompressor.m in Sources */,
 				849646341A1ED506006893C2 /* ASIAuthenticationDialog.m in Sources */,
 				84482E0019F7A16B00DD701B /* ETStringHelper.m in Sources */,
-				842294E519F8B44600EE3943 /* BasicMapAnnotation.m in Sources */,
 				842683861A1D9E9500D79F5C /* UICheckinDetailController.m in Sources */,
 				849646371A1ED506006893C2 /* ASIDownloadCache.m in Sources */,
 				84482DA919F793F800DD701B /* ViewController.m in Sources */,
@@ -1249,7 +1256,6 @@
 				849646391A1ED506006893C2 /* ASIHTTPRequest.m in Sources */,
 				8496494B1A1F0F6C006893C2 /* ETNRPLine.m in Sources */,
 				84482E9C19F7A5DF00DD701B /* SVHTTPRequest.m in Sources */,
-				842294EC19F9DDB800EE3943 /* MapViewController.m in Sources */,
 				84482E9B19F7A5DF00DD701B /* SVHTTPClient.m in Sources */,
 				84482E1319F7A56800DD701B /* ETDictionary.m in Sources */,
 				84482DA019F793F800DD701B /* main.m in Sources */,
@@ -1258,6 +1264,8 @@
 				849649411A1EEFD2006893C2 /* Reachability.m in Sources */,
 				8496493E1A1EEFD2006893C2 /* ASICloudFilesObject.m in Sources */,
 				842683811A1AF8A600D79F5C /* UITransportationDetailController.m in Sources */,
+				84FD941F1A26AE91001EE96F /* UITransportationController.m in Sources */,
+				84FD942F1A26BA74001EE96F /* CallOutAnnotationView.m in Sources */,
 				849646351A1ED506006893C2 /* ASIDataCompressor.m in Sources */,
 				8496493C1A1EEFD2006893C2 /* ASICloudFilesContainerRequest.m in Sources */,
 				849649471A1EEFD2006893C2 /* ASIS3ServiceRequest.m in Sources */,

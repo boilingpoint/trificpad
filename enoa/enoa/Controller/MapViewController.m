@@ -19,6 +19,7 @@
 	CalloutMapAnnotation *_previousdAnnotation;
     
 }
+
 -(void)setAnnotionsWithList:(NSArray *)list;
 
 @end
@@ -27,8 +28,10 @@
 
 @synthesize mapView=_mapView;
 
+
 @synthesize delegate;
 
+/*
 - (void)dealloc
 {
     //[_mapView release];
@@ -44,10 +47,16 @@
     }
     return self;
 }
+ */
 
 - (void)viewDidLoad
 {
     _annotationList = [[NSMutableArray alloc] init];
+    _mapView = [[MKMapView alloc] init];
+    _mapView.delegate = self;
+    CGRect frame = self.view.frame;
+    _mapView.frame = frame;
+    [self.view addSubview:_mapView];
     [super viewDidLoad];
 }
 
@@ -63,28 +72,30 @@
         MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:region];
         [_mapView setRegion:adjustedRegion animated:YES];
         
+        //CalloutMapAnnotation *annotation = [[CalloutMapAnnotation alloc] initWithLatitude:latitude andLongitude:longitude];
         BasicMapAnnotation *  annotation=[[BasicMapAnnotation alloc] initWithLatitude:latitude andLongitude:longitude];
         [_mapView   addAnnotation:annotation];
     }
 }
 
 
-- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+- (void)mapView:(MKMapView *)paramMapView didSelectAnnotationView:(MKAnnotationView *)view {
 	if ([view.annotation isKindOfClass:[BasicMapAnnotation class]]) {
         if (_calloutAnnotation.coordinate.latitude == view.annotation.coordinate.latitude&&
             _calloutAnnotation.coordinate.longitude == view.annotation.coordinate.longitude) {
             return;
         }
         if (_calloutAnnotation) {
-            [mapView removeAnnotation:_calloutAnnotation];
+            [paramMapView removeAnnotation:_calloutAnnotation];
             _calloutAnnotation = nil;
         }
         _calloutAnnotation = [[CalloutMapAnnotation alloc]
                                initWithLatitude:view.annotation.coordinate.latitude
                                andLongitude:view.annotation.coordinate.longitude];
-        [mapView addAnnotation:_calloutAnnotation];
         
-        [mapView setCenterCoordinate:_calloutAnnotation.coordinate animated:YES];
+        [paramMapView addAnnotation:_calloutAnnotation];
+        
+        [paramMapView setCenterCoordinate:_calloutAnnotation.coordinate animated:YES];
 	}
     else{
         if([delegate respondsToSelector:@selector(customMKMapViewDidSelectedWithInfo:)]){
@@ -109,7 +120,8 @@
         CallOutAnnotationView *annotationView = (CallOutAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"CalloutView"];
         if (!annotationView) {
             annotationView = [[CallOutAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CalloutView"];
-            JingDianMapCell  *cell = [[[NSBundle mainBundle] loadNibNamed:@"JingDianMapCell" owner:self options:nil] objectAtIndex:0];
+            JingDianMapCell  *cell = [[JingDianMapCell alloc] initWithFrame:CGRectMake(0, 0, 243, 40)];//[[[NSBundle mainBundle] loadNibNamed:@"JingDianMapCell" owner:self options:nil] objectAtIndex:0];
+            annotationView.frame = CGRectMake(0, 0, 243, 45);
             [annotationView.contentView addSubview:cell];
             
         }
@@ -121,7 +133,7 @@
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation
                                                            reuseIdentifier:@"CustomAnnotation"];
             annotationView.canShowCallout = NO;
-            annotationView.image = [UIImage imageNamed:@"pin.png"];
+            annotationView.image = [UIImage imageNamed:@"icon_pin.png"];
         }
 		
 		return annotationView;

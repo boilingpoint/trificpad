@@ -12,6 +12,8 @@
 #import "UINotificationController.h"
 #import "ETRPLine.h"
 #import "ETTransLocation.h"
+#import "ETOrderInfo.h"
+#import "ETPriceType.h"
 
 
 #define HELVETICANEUE_FONT(s) [UIFont fontWithName:@"HelveticaNeue" size:s]
@@ -190,14 +192,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 0)
-    {
-        return 42;
-    }
-    else// if(indexPath.row == 1)
-    {
-        return 90;
-    }
+    return 90;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -219,8 +214,26 @@
     ETTransLocation *location = self.locations[indexPath.section];
     ETOrderInfo *order = location.OrderArray[indexPath.row];
     UIView *view = [[UIView alloc] init];
-    UILabel *lblContactor = [[UILabel alloc] init];
+    UILabel *lblContactor = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 223, 72)];
     lblContactor.text = [NSString stringWithFormat:@"%@ %@",order.Contactor.FirstName, order.Contactor.LastName];
+    [cell.contentView addSubview:lblContactor];
+    UILabel *lblPax = [[UILabel alloc]  initWithFrame:CGRectMake(223, 0, 63, 72)];
+    lblPax.text = [NSString stringWithFormat:@"%d",order.Pax];
+    [cell.contentView addSubview:lblPax];
+    for(int i=0;i<order.PriceTypeArray.count;i++)
+    {
+        ETPriceType *priceType = order.PriceTypeArray[i];
+        UILabel *lblPriceType = [[UILabel alloc]  initWithFrame:CGRectMake(286, i*20, 129, 18)];
+        lblPriceType.text = [NSString stringWithFormat:@"%@-%ld",priceType.Title, priceType.Num];
+        [cell.contentView addSubview:lblPriceType];
+    }
+    UILabel *lblVoucher = [[UILabel alloc]  initWithFrame:CGRectMake(415, 0, 161, 72)];
+    lblVoucher.text = [NSString stringWithFormat:@"%@",order.VoucherId];
+    [cell.contentView addSubview:lblVoucher];
+    UILabel *lblNote = [[UILabel alloc]  initWithFrame:CGRectMake(576, 0, 240, 72)];
+    lblNote.text = [NSString stringWithFormat:@"%@",order.Note];
+    [cell.contentView addSubview:lblNote];
+    
     [cell setBackgroundColor:[ETColor colorWithHexString:@"#f6f6f6"]];
     
     return cell;
@@ -228,7 +241,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 0;
+    return 72;
 }
 
 

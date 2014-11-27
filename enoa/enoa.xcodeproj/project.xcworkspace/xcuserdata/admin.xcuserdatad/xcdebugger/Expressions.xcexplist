@@ -3,13 +3,49 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[UITransportationController collectionView:cellForItemAtIndexPath:]:UITransportationController.m">
-      </ContextState>
-      <ContextState
          contextName = "-[UITransportationController controlPressed:]:UITransportationController.m">
          <PersistentStrings>
             <PersistentString
                value = "self.daySegment.selectedSegmentIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[UITransportationController collectionView:cellForItemAtIndexPath:]:UITransportationController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MapViewController viewDidLoad]:MapViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_mapView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[UITransportationDetailController controlPressed:]:UITransportationDetailController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_mapViewController.mapView.layer.isHidden">
+            </PersistentString>
+            <PersistentString
+               value = "_mapViewController.view">
+            </PersistentString>
+            <PersistentString
+               value = "_mapViewController.view.layer.isHidden">
+            </PersistentString>
+            <PersistentString
+               value = "_mapViewController.mapView.layer.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[UITransportationDetailController viewDidLoad]:UITransportationDetailController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UITransportationController collectionView:didSelectItemAtIndexPath:]:UITransportationController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "line.OptionCode">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -20,10 +56,32 @@
          contextName = "-[UITransportationController viewDidLoad]:UITransportationController.m">
       </ContextState>
       <ContextState
-         contextName = "-[UITransportationController collectionView:didSelectItemAtIndexPath:]:UITransportationController.m">
+         contextName = "-[JingDianMapCell initdata]:JingDianMapCell.m">
          <PersistentStrings>
             <PersistentString
-               value = "line.OptionCode">
+               value = "bgView.layer.frame">
+            </PersistentString>
+            <PersistentString
+               value = "self.layer.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[UITransportationDetailController viewDidLayoutSubviews]:UITransportationDetailController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MapViewController mapView:didSelectAnnotationView:]:MapViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "paramMapView==_mapView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[JingDianMapCell initWithFrame:]:JingDianMapCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.layer.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

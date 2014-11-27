@@ -14,7 +14,6 @@
 {
     MKMapView *_mapView;
     
-    
     id<MapViewControllerDidSelectDelegate> delegate1;
 }
 @property(nonatomic,retain)IBOutlet MKMapView *mapView;

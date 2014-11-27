@@ -171,7 +171,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2KN-Lr-hLM">
-                                <rect key="frame" x="45" y="534" width="384" height="360"/>
+                                <rect key="frame" x="45" y="200" width="1024" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -179,17 +179,12 @@
                                     <outlet property="delegate" destination="pBu-Xt-HCY" id="Lfk-za-5va"/>
                                 </connections>
                             </tableView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="b6O-xV-A8B">
-                                <rect key="frame" x="137" y="890" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="controlView" destination="kbp-bo-6s4" id="NgE-07-bl4"/>
                         <outlet property="lblInfo" destination="BfM-GF-EzC" id="95i-LK-orU"/>
-                        <outlet property="mapView" destination="b6O-xV-A8B" id="3tV-p4-h8X"/>
                         <outlet property="tabNav" destination="Pr8-MU-v6b" id="O63-cw-RgZ"/>
                         <outlet property="tableView" destination="2KN-Lr-hLM" id="10g-e3-F0G"/>
                         <outlet property="typeSegment" destination="7zy-bc-sci" id="FGy-GA-pIX"/>
