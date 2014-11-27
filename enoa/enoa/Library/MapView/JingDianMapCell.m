@@ -32,6 +32,7 @@
     viewRight.backgroundColor = [UIColor whiteColor];
     
     viewLeft.layer.cornerRadius = 7;
+    viewRight.layer.cornerRadius = 7;
     
     self.lblPinNum = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 30, 24)];
     self.lblPinNum.text = [NSString stringWithFormat:@"%d", self.location.Pax];
